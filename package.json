@@ -1,0 +1,75 @@
+{
+  "name": "flyr",
+  "version": "1.1.0",
+  "description": "Browser-based video editor. Add graphics, animated text, and music to any video asset.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint app config tests webpack",
+    "lintfix": "eslint app config tests webpack --fix",
+    "test": "NODE_ENV=test nyc mocha tests/* --recursive --compilers js:@babel/register --require ./tests/tests-config.js",
+    "cover": "NODE_ENV=test nyc mocha tests/* --recursive --compilers js:@babel/register --require ./tests/tests-config.js",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubrien/web-video-editor.git"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "author": "Mathieu Welche",
+  "contributors": [
+    {
+      "name": "Mathieu Welche (https://github.com/mwelche)",
+      "email": "mathieuwelche@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/ubrien/web-video-editor/issues"
+  },
+  "homepage": "https://github.com/ubrien/web-video-editor#readme",
+  "devDependencies": {
+    "babel-eslint": "8.2.3",
+    "babel-plugin-istanbul": "^4.1.6",
+    "chai": "4.1.2",
+    "chai-immutable": "1.5.4",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "7.8.2",
+    "mocha": "5.2.0",
+    "nyc": "^12.0.2",
+    "supertest": "3.1.0",
+    "webpack-bundle-analyzer": "^2.13.1"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "jsonwebtoken": "^8.4.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-jwt": "^3.5.1",
+    "koa-router": "^7.4.0",
+    "mongodb": "^3.1.13",
+    "webpack": "^4.29.5"
+  },
+  "engines": {
+    "node": "10.1.x",
+    "npm": "6.1.x"
+  },
+  "nyc": {
+    "include": [
+      "app/**"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "sourceMap": false,
+    "instrument": false,
+    "cache": false
+  }
+}
