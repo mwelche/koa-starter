@@ -6,7 +6,7 @@ const Router = require("koa-router");
 
 // init db
 
-require("./mongo")(app);
+require("./db")(app);
 
 // logger
 
@@ -92,4 +92,6 @@ securedRouter.delete("/people/:id", async (ctx) => {
     ctx.body = await ctx.app.people.deleteOne(documentQuery);
 });
 
-app.listen(8080);
+const server = app.listen(8080);
+
+module.exports = server;
