@@ -48,6 +48,7 @@
     "@babel/register": "^7.0.0",
     "bcrypt": "^3.0.4",
     "chai-http": "^4.2.1",
+    "dotenv": "^6.2.0",
     "jsonwebtoken": "^8.4.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
