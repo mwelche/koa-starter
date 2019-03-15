@@ -1,18 +1,19 @@
 {
-  "name": "flyr",
-  "version": "1.1.0",
-  "description": "Browser-based video editor. Add graphics, animated text, and music to any video asset.",
+  "name": "koa-starter",
+  "version": "0.1.0",
+  "description": "Koa API starter project with basic auth and mongodb",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint app config tests webpack",
-    "lintfix": "eslint app config tests webpack --fix",
+    "lint": "eslint app config tests",
+    "lintfix": "eslint app config tests --fix",
     "test": "NODE_ENV=test nyc mocha tests/* --recursive --compilers js:@babel/register --require ./tests/tests-config.js",
     "cover": "NODE_ENV=test nyc mocha tests/* --recursive --compilers js:@babel/register --require ./tests/tests-config.js",
-    "start": "node index"
+    "start": "node index",
+    "dev": "nodemon"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ubrien/web-video-editor.git"
+    "url": "git+https://github.com/mwelche/koa-starter.git"
   },
   "keywords": [
     "koa"
@@ -25,9 +26,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/ubrien/web-video-editor/issues"
+    "url": "https://github.com/mwelche/koa-starter/issues"
   },
-  "homepage": "https://github.com/ubrien/web-video-editor#readme",
+  "homepage": "https://github.com/mwelche/koa-starter#readme",
   "devDependencies": {
     "babel-eslint": "8.2.3",
     "babel-plugin-istanbul": "^4.1.6",
@@ -45,7 +46,11 @@
   },
   "dependencies": {
     "@babel/core": "^7.3.3",
+    "@babel/plugin-transform-async-to-generator": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.3.4",
     "bcrypt": "^3.0.4",
     "chai-http": "^4.2.1",
     "dotenv": "^6.2.0",
@@ -53,6 +58,7 @@
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-jwt": "^3.5.1",
+    "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
     "mongodb": "^3.1.13",
     "webpack": "^4.29.5"

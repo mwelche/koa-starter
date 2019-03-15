@@ -2,5 +2,5 @@
 
 module.exports = function(app) {
   // mongo
-  require('/.mongo')(app);
+  require('./mongo')(app);
 };

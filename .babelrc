@@ -6,7 +6,11 @@
     ],
   ],
   "plugins": [
-    "transform-async-to-generator",
+    ["@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
   ],
   "env": {
     "test": {
